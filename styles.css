@@ -1,0 +1,251 @@
+/* =====================================================
+   GLOBAL PAGE STYLING
+===================================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #111;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    border-right: 2px solid #333;
+}
+
+.sidebar h2 {
+    color: gold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* SIDEBAR LINKS */
+
+.sidebar a {
+    display: block;
+    background: #1e1e1e;
+    color: white;
+    padding: 14px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background: gold;
+    color: black;
+}
+
+/* =====================================================
+   MAIN CONTENT AREA
+===================================================== */
+
+.main {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+.main h1 {
+    color: gold;
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    background: linear-gradient(135deg, #111, #123d2d);
+    border: 2px solid gold;
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 0 25px rgba(255, 215, 0, 0.25);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #ddd;
+}
+
+.hero-cards {
+    font-size: 48px;
+    letter-spacing: 18px;
+    margin-top: 20px;
+}
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+.section-title {
+    color: gold;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* =====================================================
+   POSITION BUTTON GRID
+===================================================== */
+
+.position-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* =====================================================
+   POSITION BUTTONS
+===================================================== */
+
+.position-card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(145deg, #b8860b, #5c3b00);
+
+    border: 3px solid gold;
+
+    border-radius: 18px;
+
+    padding: 30px 20px;
+
+    color: white;
+    text-decoration: none;
+
+    min-height: 140px;
+
+    box-shadow:
+        0 0 15px rgba(255,215,0,0.35),
+        inset 0 0 10px rgba(255,255,255,0.1);
+
+    transition: all 0.25s ease;
+}
+
+/* LARGE POSITION TEXT */
+
+.position-card span {
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* SMALL DESCRIPTION */
+
+.position-card small {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #f5f5f5;
+    letter-spacing: 1px;
+}
+
+/* HOVER EFFECT */
+
+.position-card:hover {
+
+    transform: translateY(-8px) scale(1.03);
+
+    background:
+        linear-gradient(145deg, #00994d, #004d26);
+
+    box-shadow:
+        0 0 25px rgba(0,255,128,0.5),
+        0 0 40px rgba(255,215,0,0.3);
+
+    border-color: #00ff99;
+}
+
+/* =====================================================
+   IMAGE GRID (4 BOX LAYOUT)
+===================================================== */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* =====================================================
+   IMAGE BOXES
+===================================================== */
+
+.image-box {
+    background: #151515;
+
+    border: 2px solid #333;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.6);
+}
+
+.image-box h2 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+   IMAGES
+===================================================== */
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   MOBILE SUPPORT
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .position-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
