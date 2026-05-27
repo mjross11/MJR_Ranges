@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UTG Ranges</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="/">← Home</a>
+  </nav>
+
+  <main class="content">
+
+    <h1>UTG Ranges</h1>
+
+    <!-- Button Controls -->
+    <div class="image-controls">
+      <button data-image="rfi">RFI</button>
+      <button data-image="reraised">Re-Raised vs BB</button>
+    </div>
+
+    <!-- Image Display -->
+    <div class="image-display">
+      <img id="rfi" src="utg_rfi.jpg" alt="UTG RFI Range">
+      <img id="reraised" src="utg_reraised_bb.jpg" alt="UTG Re-Raised vs BB">
+    </div>
+
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.image-controls button');
+    const images = document.querySelectorAll('.image-display img');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.image;
+
+        images.forEach(img => {
+          img.style.display = img.id === target ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Show first image by default
+    images.forEach((img, i) => {
+      img.style.display = i === 0 ? 'block' : 'none';
+    });
+  </script>
+
+</body>
+</html>
